@@ -1,6 +1,5 @@
 package com.yurdan.authService.service;
 
-import com.yurdan.authService.model.entity.BankUser;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Value;
