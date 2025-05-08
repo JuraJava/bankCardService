@@ -1,13 +1,14 @@
-package com.yurdan;
+package com.yurdan.authService;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BankCardManagementSystemApplicationTests {
+class AuthServiceApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }
+
