@@ -2,7 +2,8 @@ package com.yurdan.bankCardService.controller.rest;
 
 import com.yurdan.bankCardService.model.entity.BankAccount;
 import com.yurdan.bankCardService.service.BankCardService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,8 +11,9 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/cards")
+@RequiredArgsConstructor
 public class BankCardController {
-    @Autowired
+
     private BankCardService bankCardService;
 
     @GetMapping

@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.yurdan</groupId>
-	<artifactId>bankCardManagementSystem</artifactId>
+	<artifactId>bankCardService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>bankCardManagementSystem</name>
 	<description>Demo project for Spring Boot</description>
@@ -43,20 +43,17 @@
 			<version>0.11.5</version>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-gateway</artifactId>
-			<version>4.2.1</version>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-impl</artifactId>
+			<version>0.11.5</version>
+			<scope>runtime</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-			<version>4.1.3</version>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-jackson</artifactId>
+			<version>0.11.5</version>
+			<scope>runtime</scope>
 		</dependency>
-		<!--       <dependency>-->
-		<!--          <groupId>org.springframework.cloud</groupId>-->
-		<!--          <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>-->
-		<!--          <version>4.2.1</version>-->
-		<!--       </dependency>     -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
@@ -70,14 +67,9 @@
 			<artifactId>liquibase-core</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.kafka</groupId>
-			<artifactId>spring-kafka</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-docker-compose</artifactId>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
 			<scope>runtime</scope>
-			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>org.postgresql</groupId>
@@ -92,11 +84,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.kafka</groupId>
-			<artifactId>spring-kafka-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -117,27 +104,13 @@
 		</dependency>
 	</dependencies>
 
-	<!--    <dependencyManagement>-->
-	<!--       <dependencies>-->
-	<!--          <dependency>-->
-	<!--             <groupId>org.springframework.cloud</groupId>-->
-	<!--             <artifactId>spring-cloud-dependencies</artifactId>-->
-	<!--             <version>${spring-cloud.version}</version>-->
-	<!--             <type>pom</type>-->
-	<!--             <scope>import</scope>-->
-	<!--          </dependency>-->
-	<!--       </dependencies>-->
-	<!--    </dependencyManagement>-->
-
 	<build>
 		<plugins>
-
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>versions-maven-plugin</artifactId>
 				<version>2.17.1</version> <!-- или последняя доступная версия -->
 			</plugin>
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
