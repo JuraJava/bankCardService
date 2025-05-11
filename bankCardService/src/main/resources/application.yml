@@ -6,15 +6,15 @@
 #jwt.secret=your_secret_key_here
 
 spring:
-    datasource:
-      url: jdbc:postgresql://localhost:5432/bank_card_service
-      username: postgres
-      password: postgres
-      driver-class-name: org.postgresql.Driver
-    jpa:
-        hibernate:
-          ddl-auto: none
-    liquibase:
-      change-log: classpath:db/changelog/db.changelog-master.yaml
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bank_card_service
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
 #      jwt:
 #        secret: our_secret_key_here

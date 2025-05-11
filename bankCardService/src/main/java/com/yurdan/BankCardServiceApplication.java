@@ -2,14 +2,13 @@ package com.yurdan;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-public class BankCardManagementSystemApplication {
+public class BankCardServiceApplication {
 
 	public static void main(String[] args) {
 
-		SpringApplication.run(BankCardManagementSystemApplication.class, args);
+		SpringApplication.run(BankCardServiceApplication.class, args);
 	}
 
 }
